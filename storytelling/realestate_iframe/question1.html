@@ -1,0 +1,239 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/kakao.min.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+</head>
+<body>
+
+<form name="send_form" id="s_form" method="post"
+      action="./question2.html">
+
+<div class="contentWrap">
+
+    <!-- 가구형태 설명 팝업문 -->
+    <div class="helper_area">
+
+        <div class="helper_closeBtn"></div>
+
+        <h1>가구 형태 알아보기</h1>
+
+        <ul class="hometype_navi">
+            <li><a href="#apart_Txt">아파트</a></li>
+            <li><a href="#house_Txt">단독주택</a></li>
+            <li><a href="#linkedhouse_Txt">연립주택</a></li>
+            <li><a href="#lothouse_Txt">다세대주택</a></li>
+            <li><a href="#manyfamily_Txt">다가구주택</a></li>
+        </ul>
+
+        <img src="http://img.khan.co.kr/spko/storytelling/2016/realestate/apartment_thum.jpg" class="hometype"
+             alt="아파트 사진"/>
+
+        <div id="apart_Txt" class="hometype_txt">
+            <h4>아파트</h4>
+            <h5>공동주택 · 5층이상 · 소유주 다수</h5>
+            <p>공동주택 중에서도 <b>5층 이상</b>의 건물을 아파트라고 합니다.</p>
+        </div>
+
+        <img src="http://img.khan.co.kr/spko/storytelling/2016/realestate/house_thumb.jpg" class="hometype"
+             alt="단독주택 사진"/>
+
+        <div id="house_Txt" class="hometype_txt">
+            <h4>단독주택</h4>
+            <h5>단독주택 · 3층이하 · 소유주 개인</h5>
+            <p>한 필지내의 주택의 <b>소유주가 한 개인의 것</b>일 경우 해당 주택을 단독주택이라고 합니다. 또한 주택으로 쓰이는 층수(지하층을 제외)가 3개층 이하여야 합니다. </p>
+        </div>
+
+        <img src="http://img.khan.co.kr/spko/storytelling/2016/realestate/linkhouse_thumb.jpg" class="hometype"
+             alt="연립주택 사진"/>
+
+        <div id="linkedhouse_Txt" class="hometype_txt">
+            <h4>연립주택</h4>
+            <h5>공동주택 · 4층이하 · 소유주 다수 · 면적 200평 이상</h5>
+            <p>공동주택 중에서도 <b>4개층 이하</b>의 건물이며, 동시에 연면적이 660㎡(약 200평) 이상인 주택을 연립주택이라고 합니다. 이때의 층수는 절대층수로 상가가 있는 건물 층은 빼고
+                주택으로만 사용하고 있는 것만을 따집니다.</p>
+        </div>
+
+        <img src="http://img.khan.co.kr/spko/storytelling/2016/realestate/lothouse_thumb.jpg" class="hometype"
+             alt="다세대주택 사진"/>
+
+        <div id="lothouse_Txt" class="hometype_txt">
+            <h4>다세대주택</h4>
+            <h5>공동주택 · 4층이하 · 소유주 다수 · 면적 200평 이하</h5>
+            <p>공동주택 중에서도 <b>4개층 이하</b>의 건물이며, 동시에 연면적이 660㎡(약 200평) 이하인 주택을 다세대주택이라고 합니다.한 필지내의 여러 세대가 각자 주택을 소유하고 있는
+                공동주택의 한 종류이므로 <b>세대별 구분소유, 구분등기, 매매, 분양이 가능</b>합니다.</p>
+        </div>
+
+        <img src="http://img.khan.co.kr/spko/storytelling/2016/realestate/lot_splitehouse_thumb.jpg" class="hometype"
+             alt="다가구주택 사진"/>
+
+        <div id="manyfamily_Txt" class="hometype_txt">
+            <h4>다가구주택</h4>
+            <h5>단독주택 · 4층이하 · 소유주 개인 · 면적 200평 이하</h5>
+            <p><b>4개층 이하</b>의 건물이며, 연면적이 660㎡(약 200평) 이하인 점은 다세대 주택과 동일하나, 주택형태가 한명의 소유주를 바탕으로한 단독주택 형태이기에 각 <b>세대별
+                구분소유, 구분등기, 매매, 분양이 불가</b>합니다. 원룸은 대개 한명의 소유주를 가진 다가구 주택인 경우가 많습니다. </p>
+        </div>
+
+        <div class="slideup_2"></div>
+    </div>
+
+
+    <!-- 테스트 질문 영역 -->
+
+    <div class="que_area">
+
+        <div class="queHead">
+            <h1>Q1</h1>
+        </div>
+
+        <div class="queTxt">
+            <p>계약할 전·월셋집은 어떤 형태입니까?</p>
+        </div>
+
+        <div class="helper">
+        </div>
+
+            <div class="respond_area">
+
+                <ul class="home_type">
+
+                    <li><label for="apartment" class="radio_label"><img
+                            src="http://img.khan.co.kr/spko/storytelling/2016/realestate/hometype_2_2.png"/><input
+                            type="radio" id="apartment" name="home_type" value="apartment" class="home_type_css"
+                            checked="checked"/><br/>아파트</label></li>
+                    <li><label for="house" class="radio_label"><img
+                            src="http://img.khan.co.kr/spko/storytelling/2016/realestate/hometype_1_2.png"/><input
+                            type="radio" id="house" name="home_type" value="house"/><br/>단독주택<br/>연립주택<br/>다세대주택</label>
+                    </li>
+                    <li><label for="lot_solithouse" class="radio_label"><img
+                            src="http://img.khan.co.kr/spko/storytelling/2016/realestate/hometype_3.png"/><input
+                            type="radio" id="lot_solithouse" name="home_type" value="lot_solithouse"/><br/>다가구주택</label>
+                            <!--onclick="setTimeout(parent.setiframe,100);"-->
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="loan_area">
+                <h4>Q1-1. 같은 건물에 거주하는 총 가구수는?</h4>
+                <div id="textBox_lot">
+                    <input type="text" name="lot_people" id="onlyNumber0" placeholder="ex)10 " class="onlyNumber"/>&nbsp;&nbsp;가구
+                </div>
+
+                <h4>Q1-2. 입주자들의 평균 전월세 보증금은?</h4>
+
+                <div class="SeekBar_area">
+
+                    <label id="slider_label0" for="amount">선택 금액 : </label>
+                    <input type="text" id="amount" name="amount2" readonly
+                           style="border:1; color:#f6931f; font-weight:bold;">
+                    <input id="direct_put" type="checkbox" name="check_over5" value="over5"/>
+                    <label id="direct_put_label">직접 입력</label>
+                    <input type="hidden" id="price" name="lot_price"/>
+
+
+                    <div class="slider_body">
+
+                        <label id="slider_uplable"> 단위:원</label>
+
+                        <br>
+
+                        <div id="slider1" value="0">
+                            <br>
+                            <label id="slider_lable1">0</label>
+                            <label id="slider_lable2"> 2.5억</label>
+                            <label id="slider_lable3"> 5억</label>
+                        </div>
+
+                    </div>
+                    <!-- sliderbody -->
+
+                    <div id="slider_area">
+                        <div class="pre_set" id="pre_set">
+                            <input type="text" name="lot_overprice" class="onlyNumber" placeholder="ex)55000 "/>만 원
+                            <p class="example_p">ex) 5억 5000만원 ▶ "55000" 입력</p>
+                        </div>
+                        <div id="caution"></div>
+                        <div id="skip_div">
+                            <input type="button" value="잘 모르겠어요(건너뛰기)" onclick='mySubmit(1)'/>
+                            <input type="hidden" id="skip_data" name="skip_value"/>
+                        </div>
+                    </div>
+
+                </div>
+                <!--seekbar area-->
+            </div>
+    </div>
+    <!--div loan-->
+
+</div>
+
+<div class="nxtBtn2">
+    <input type="button" value="다음" onclick='mySubmit(2)'/>
+</div>
+
+</form>
+
+<script>
+
+    $(document).ready(function(){
+        try {
+            addInputHandler({input:$(".onlyNumber"),dataType:"N",maxlength:11});
+            addInputHandler({input:$("#onlyNumber0"),dataType:"N",maxlength:5});
+        } catch(e) {
+            console.log(e);
+        }
+
+        /*$("#lot_solithouse").click(function(){
+            var bodyHeight = $("body").innerHeight();
+            console.log(bodyHeight);
+            parent.resizeIframe(bodyHeight);
+        });*/
+
+    });
+
+
+
+    function mySubmit(index) {
+        var f=document.send_form;
+
+        if (index == 1) {
+            $('#skip_data').val('click_skip');
+            f.submit();
+        }
+
+        if (index == 2) {
+
+            if(document.getElementById("lot_solithouse").checked){
+                if(!f.lot_people.value){
+                    document.getElementById('caution').innerHTML = "가구수를 입력하세요.";
+                    f.lot_people.focus();
+                    //return false;
+                }
+                else if(!f.lot_overprice.value && f.amount2.value == "0원"){
+                    document.getElementById('caution').innerHTML = "평균 보증금을 입력하세요.";
+                    f.lot_overprice.focus();
+                    //return false;
+                }
+                else{
+                    f.submit();
+                }
+            }
+            else{
+                f.submit();
+            }
+
+        }
+        //2
+    }
+
+</script>
+
+</body>
+</html>

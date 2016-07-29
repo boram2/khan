@@ -1,0 +1,77 @@
+﻿<?php
+/**
+ * @file    ./q1.html
+ * @author  2016-06-15 최보람 <fruitful@khan.kr>
+* @brief   진단테스트 질문1 페이지
+**/
+
+
+/**
+* [Include] Header
+**/
+include('./inc/header.html');
+
+?>
+
+<div class="wrapper">
+
+    <?php
+    /**
+     * [Include] 상단탑바 및 SNS공유(Modal)
+     **/
+    include('./inc/top_bar.html');
+    ?>
+
+    <iframe id="ifr" name="myframe" src="./subindexx.html" frameborder="0" scrolling="no" width="100%" height="auto"
+            onload="setiframe(this);"></iframe>
+
+
+</div>
+
+<script>
+    function setiframe() {
+        console.log("setIframe Method");
+        var lastHeight = 0, curHeight = 0, $frame = $('iframe:eq(0)');
+
+        curHeight = $frame.contents().find('body').height();
+        if (curHeight != lastHeight) {
+            $frame.css('height', (lastHeight = curHeight) + 'px');
+        }
+
+        console.log(curHeight + "," + lastHeight);
+    }
+
+    function setIframeHeight(iframe) {
+        if (iframe) {
+            console.log("check");
+            var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+            if (iframeWin.document.body) {
+                iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+            }
+        }
+    };
+
+    function resizeIframe(childHeight){
+
+        console.log("resize Method");
+        var $frame = $('iframe:eq(0)');
+
+        if (childHeight!="") {
+            console.log("before heights"+$frame.height());
+            $frame.css('height', childHeight + 'px');
+            console.log("after heights"+$frame.height());
+        }
+
+    }
+
+    /*window.onload = function () {
+        setIframeHeight(document.getElementById('ifr'));
+    };*/
+</script>
+
+<?php
+/**
+ * [Include] Footer
+ **/
+include('./inc/footer.html');
+?>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/kakao.min.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+</head>
+<body>
+
+<form name="send_form" method="post" action="./question6.html">
+    <input type="hidden" name="home_type" value="<?=$_POST['home_type']?>"/>
+    <input type="hidden" name="lot_people" value="<?=$_POST['lot_people']?>"/>
+    <input type="hidden" name="lot_price" value="<?=$_POST['lot_price']?>"/>
+    <input type="hidden" name="lot_overprice" value="<?=$_POST['lot_overprice']?>"/>
+    <input type="hidden" name="price0" value="<?=$_POST['price0']?>"/>
+    <input type="hidden" name="over_price0" value="<?=$_POST['over_price0']?>"/>
+    <input type="hidden" name="price1" value="<?=$_POST['price1']?>"/>
+    <input type="hidden" name="over_price1" value="<?=$_POST['over_price1']?>"/>
+    <input type="hidden" name="price2" value="<?=$_POST['price2']?>"/>
+    <input type="hidden" name="over_price2" value="<?=$_POST['over_price2']?>"/>
+    <input type="hidden" name="radio1" value="<?=$_POST['radio1']?>"/>
+    <input type="hidden" name="skip_value" value="<?=$_POST['skip_value']?>"/>
+
+
+    <div class="contentWrap">
+
+        <!-- 테스트 질문 영역 -->
+
+        <div class="que_area">
+
+
+            <div class="queHead">
+                <h1>Q5</h1>
+            </div>
+
+            <div class="queTxt">
+                <p>집 주인과 직접 계약하셨습니까?</p>
+            </div>
+
+            <div class="q1_2box">
+                <div class="respond_area">
+                    <div class="yes_no_area">
+
+                        <div id="radio">
+                            <input type="radio" id="radio1" name="radio2" value="yesBtn"><label class="yesBtn"
+                                                                                                for="radio1">Yes</label>
+                            <input type="radio" id="radio2" name="radio2" checked="checked" value="noBtn"><label
+                                class="noBtn" for="radio2">No</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="nxtBtn2"><input type="submit" value="다음"/></div>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

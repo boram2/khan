@@ -1,0 +1,85 @@
+.topbar{
+	margin-left:15px;
+	margin-right:15px;
+}
+
+#slider1, #slider2{
+	margin:5px 15px 15px 15px;
+	background: #fff;
+}
+
+#slider_label0{
+	/* font-weight:500 !important; */
+}
+
+#slider_lable1{
+	font-size:12px;
+}
+
+#slider_lable2{
+	float: right;
+	position: relative;
+	left: -48%;
+	font-size:12px;
+	/* font-weight:500 !important; */
+}
+
+#slider_lable3{
+	float : right;
+	margin-right: -24px;
+	font-size:12px;
+	/* font-weight:500 !important; */
+}
+#slider_lable3_1{
+	float : right;
+	margin-right: -18px;
+	font-size:12px;
+}
+
+#slider_uplable{
+	float : right;
+	font-size: 11px;
+	margin-right:7px;
+	font-weight:500 !important;
+}
+
+.ui-slider-range { background: #ffae3c !important; }
+
+.ui-slider-handle{ background: #fff; border:#ffc26b; }
+.ui-state-default{ 
+	border: 1px solid rgba(85, 76, 70, 0.26);
+}
+
+.ui-slider-handle ui-state-default ui-corner-all{
+	background:#fff;
+}
+
+.ui-widget-content {
+    border: 1px solid rgba(85, 76, 70, 0.26);
+    background: #fff;
+    color: #333333;
+	border-radius : 7px;
+}
+
+.ui-slider-handle{
+	background:red;
+}
+
+input#amount, #amount_q2{
+    border: none;
+	padding : 5px;
+	background: none;
+	width: 110px;
+}
+/*Yes/No button*/
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{/*안눌려진 버튼*/
+  color:#cac9c9 !important;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{
+    border: 1px solid #ffae3c;
+    background: #fff;
+    font-weight: bold;
+    color: #eb8f00 !important;
+}

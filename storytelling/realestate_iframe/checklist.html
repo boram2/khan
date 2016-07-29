@@ -1,0 +1,112 @@
+﻿<?php
+/**
+ * @file    ./checklist.html
+ * @author  2016-06-15 최보람 <fruitful@khan.kr>
+ * @brief   전월세 계약자들을 위한 계약 전 체크리스트 페이지
+ **/
+
+
+/**
+ * SNS 공유 URL
+ **/
+$sns = (object) array();
+$sns->url = urlencode('http://news.khan.co.kr/kh_storytelling/2016/realestate/checklist.html');
+$sns->title = rawurlencode('보증금을 지켜라! 초보 세입자를 위한 전월세 계약  진단 테스트');
+
+
+/**
+ * [Include] Header
+ **/
+include('./inc/header.html');
+
+?>
+
+          <div class="wrapper">
+
+<?php
+
+/**
+ * [Include] 상단탑바 및 SNS공유(Modal)
+ **/
+include('./inc/top_bar.html');
+?>
+
+			
+		 <!-- 콘텐츠 영역 -->
+
+			<div class="contentWrap">
+			
+				<div class="test_result_area">
+					
+					<p class="deco"></p>
+					<h2>check <span class="bold">LIST</span></h2>
+			
+					<div class="checklist_area">
+
+						<div class="checklist">
+
+								<h3>1. 부동산 중개업소가 등록된 업소인지 확인합니다.</h3>
+								<p>등록 확인은 국가공간정보포털과 한국공인중개사협회에서 가능합니다.</p>
+								<p><a href="http://www.nsdi.go.kr">▶ 국가공간정보포털(http://www.nsdi.go.kr) 바로가기</a><br /><a href="http://www.kar.or.kr">▶ 한국공인중개사협회(http://www.kar.or.kr) 바로가기</a> </p>
+
+								<h3>2. 가급적이면 집주인과 직접 계약합니다.</h3>
+								<p>계약 시 집주인의 신분증도 확인합니다. 불가피하게 대리 계약 시에는 집주인의 인감도장이 날인된 위임장, 인감증명서, 대리인의 신분증을 요구하여 사본을 보관합니다. 필요한 경우 위임을 증명해주는 통화를 녹취하는 것도 좋습니다.</p>
+
+								<h3>3. 주택의 등기부등본을 확인합니다.</h3>
+								<p>등기부등본을 통해 주택의 소유관계, 근저당권 등을 꼼꼼히 체크합니다. 대법원 인터넷 등기소를 통해 확인이 가능합니다.</p>
+								<p><a href="http://www.iros.go.kr" target="_blank">▶ 인터넷 등기소(http://www.iros.go.kr) 바로가기</a></p>
+
+								<h3>4. 주택의 근저당권과 보증금을 체크합니다.</h3>
+								<p>근저당권의 채권최고액(보통 대출금의 130%)과 전세금을 합한 총액이 아파트의 경우 매매가의 70%, 연립·단독·다가구의 경우 매매가의 60%이하인 것이 안전합니다. 다가구 주택의 경우는, 전체 세입자의 총 보증금이 얼마인지 집주인에게 요구하여 확인합니다.  </p>
+
+								<h3>5. 표준계약서 작성을 요구합니다.</h3>
+								<p>계약서 작성 시 법무부에서 만든 주택임대차 표준계약서 작성을 부동산 중개업소에게 요구하는 것이 좋습니다.</p>
+
+								<h3>6. 집주인의 세금 납부 현황을 체크합니다.</h3>
+								<p>국가가 발행한 집주인의 국세 및 지방세 납입 증명서를 제출받아 확인합니다.</p>
+
+								<h3>7. 확정일자를 꼭 받읍시다.</h3>
+								<p class="last">잔금을 치르자마자 주민센터를 찾아 전입신고 뒤 임대차계약서에 확정일자를 받습니다. </p>
+
+						</div>
+						
+						<p class="imgdown"><a href="http://img.khan.co.kr/spko/storytelling/2016/realestate/checklist.jpg" target="_blank">체크리스트<br /> 이미지 파일 다운</a></p>
+					
+					</div>
+
+					<div class="bottom_navi_area">
+
+						<ul class="bottom_navi">
+
+							<li id="allresultBtn"><a href="http://news.khan.co.kr/kh_storytelling/2016/realestate/allresult.html">모든 위험 유형 보러가기</a></li>
+							<li id="checkBtn"><a href="http://news.khan.co.kr/kh_storytelling/2016/realestate/checklist.html">계약 필수 체크리스트</a></li>
+							<li id="tipBtn"><a href="http://news.khan.co.kr/kh_storytelling/2016/realestate/tip.html">계약이 끝난 후에도 이런 것은 확인하세요!</a></li>
+						
+						</ul>
+
+						<div class="tipBtn">
+							<a href="http://news.khan.co.kr/kh_storytelling/2016/realestate/subindex.html"><p>테스트 다시하기</p></a>
+						</div>
+
+					</div>
+				
+				
+				</div>
+
+			</div>
+
+			
+		 <!-- 하단 이미지 영역-->
+
+			<div class="bottomArea">
+				<div class="bottomImg"></div>
+			</div>
+
+		</div>
+
+<?php
+/**
+ * [Include] Footer
+ **/
+include('./inc/footer.html');
+?>

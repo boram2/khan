@@ -1,0 +1,101 @@
+<?php
+/**
+ * @file    /data/news/kh_storytelling/2016/realestate/inc/header.html
+ * @author  2016-06-15 최보람 <fruitful@khan.kr>
+ * @brief   사이트내에 공통으로 사용하는 헤더부분
+ **/
+
+if (@$meta_url == '')
+{
+    $meta_url = 'http://news.khan.co.kr/kh_storytelling/2016/realestate/';
+}
+
+
+/**
+ * SNS URL
+ **/
+if(!@$sns)
+{
+    $sns = (object) array();
+    $sns->url = urlencode('http://news.khan.co.kr/kh_storytelling/2016/realestate/');
+    $sns->title = urlencode('보증금을 지켜라! 초보 세입자를 위한 전월세 계약 진단 테스트');
+
+}
+$sns->facebook = 'http://www.facebook.com/sharer/sharer.php?u='. $sns->url;
+$sns->twitter = 'http://twitter.com/intent/tweet?text='. $sns->title .'&url='. $sns->url;
+$sns->kakaostory = 'https://story.kakao.com/s/share?url='. $sns->url .'&text='. $sns->title;
+$sns->band = 'http://band.us/plugin/share?body='. $sns->title .' '. $sns->url;
+$sns->googleplus = 'https://plus.google.com/share?url='. $sns->url;
+$sns->nblog = 'http://blog.naver.com/openapi/share?url='. $sns->url .'&title='. $sns->title;
+
+?>
+
+<!doctype html>
+<html>
+    <head>
+        <title>보증금을 지켜라, 전월세 계약 테스트- 경향신문</title>
+
+        <!-- 메타 태그-->
+
+        <!--[if lt IE 9]>
+            <script src="http://www.khan.co.kr/spko/js/plugin/respond.min.js"></script>
+            <script  src="http://www.khan.co.kr/spko/js/plugin/html5shiv.min.js"></script>
+            <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+        <![endif]-->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta name="keywords" content="아차 하면 떼인다... 보증금을 지켜라!">
+    <meta name="description" content="초보 세입자를 위한 전월세 계약  진단 테스트">
+
+    <meta property="og:url" content="<?=$meta_url;?>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="아차 하면 떼인다... 보증금을 지켜라!" />
+    <meta property="og:description" content="초보 세입자를 위한 전월세 계약  진단 테스트" />
+    <meta property="og:image" content="http://img.khan.co.kr/spko/storytelling/2016/realestate/profile.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="<?=$meta_url;?>">
+    <meta name="twitter:creator" content="@kyunghyang">
+    <meta name="twitter:title" content="아차 하면 떼인다... 보증금을 지켜라!">
+    <meta name="twitter:description" content="초보 세입자를 위한 전월세 계약  진단 테스트">
+    <meta name="twitter:image" content="http://img.khan.co.kr/spko/storytelling/2016/realestate/profile.jpg">    
+
+    <link rel="shortcut icon" href="http://img.khan.co.kr/spko/storytelling/planet/icon/hyangi.png">
+
+        <!-- 스타일시트 태그-->
+
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/layout.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+        
+
+
+        <!-- 스크립트 태그-->
+
+        <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/bootstrap.min.js"></script>
+        <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/jquery-ui.min.js"></script>
+        <!-- <script type="text/javascript" src="js/jquery-ui.min.js"></script> -->    
+        <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/kakao.min.js"></script>
+        <script type="text/javascript" src="http://www.khan.co.kr/spko/js/hyang2/_sns_send.js"></script>
+        <script type="text/javascript" src="http://www.khan.co.kr/spko/js/khan/article_view.js"></script>
+        <script type="text/javascript" src="http://www.khan.co.kr/spko/js/common/common.js"></script>
+        <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/jquery.easing.1.3.js"></script>
+        <!-- <script type="text/javascript" src="js/jquery.easing.1.3.js"></script> -->
+        <!-- <script type="text/javascript" src="js/jquery-ui.js"></script> -->
+        <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+
+        <script type="text/javascript" src="js/custom.js"></script>
+        <script type="text/javascript" src="js/slider.js"></script>
+
+    </head>
+
+    <body>
+
+    <!-- Body 시작 -->
+

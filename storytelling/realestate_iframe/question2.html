@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/kakao.min.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+</head>
+<body>
+
+<form name="send_form" method="post" action="./question3.html" onsubmit="return submit_check();">
+    <input type="hidden" name="home_type" value="<?=$_POST['home_type']?>"/>
+    <input type="hidden" name="lot_people" value="<?=$_POST['lot_people']?>"/>
+    <input type="hidden" name="lot_price" value="<?=$_POST['lot_price']?>"/>
+    <input type="hidden" name="lot_overprice" value="<?=$_POST['lot_overprice']?>"/>
+    <input type="hidden" name="skip_value" value="<?=$_POST['skip_value']?>"/>
+
+    <div class="contentWrap">
+
+        <!-- 테스트 질문 영역 -->
+
+        <div class="que_area">
+
+            <div class="queHead">
+                <h1>Q2</h1>
+            </div>
+
+            <div class="queTxt">
+                <p>계약하려는 전·월셋집의 보증금은 얼마입니까?</p>
+            </div>
+
+            <div class="q1_2box">
+                <div class="sliderAmount_box">
+                    <label for="amount">선택 금액 : </label>
+                    <input type="text" id="amount" name="amount2" readonly
+                           style="border:1; color:#f6931f; font-weight:bold;">
+                    <input id="direct_put" type="checkbox" name="check_over5" value="over5"
+                           onClick="check_over(this);"/>
+                    <label id="direct_put_label">직접 입력</label>
+                    <input type="hidden" id="price" name="price0"/>
+                </div>
+
+                <div class="respond_area">
+                    <div class="SeekBar_area">
+                        <div class="slider_body">
+                            <label id="slider_uplable"> 단위:원</label>
+                            <br>
+                            <div class="slider_class">
+                                <div id="slider1" value="0">
+                                    <br>
+                                    <label id="slider_lable1">0</label>
+                                    <label id="slider_lable2"> 2.5억</label>
+                                    <label id="slider_lable3"> 5억</label>
+                                </div>
+                            </div><!-- slider_class-->
+                        </div><!--slider body-->
+
+                        <div id="slider_area">
+                            <div class="pre_set" id="pre_set">
+                                <input type="text" name="over_price0" class="onlyNumber" placeholder="ex)55000 "/>만 원
+                                <p class="example_p">ex) 5억 5000만원 ▶ "55000" 입력</p>
+                            </div>
+                            <div id="caution"></div>
+                        </div>
+
+                    </div><!--seelBar_area-->
+                </div>
+            </div>
+
+            <!-- 테스트 질문 영역 끝 -->
+
+            <div class="nxtBtn2"><input type="submit" value="다음"/></div>
+        </div>
+    </div>
+</form>
+
+<script>
+
+    $(document).ready(function () {
+        try {
+            addInputHandler({input: $(".onlyNumber"), dataType: "N", maxlength: 11});
+        } catch (e) {
+            console.log(e);
+        }
+    });
+
+    function submit_check() {
+        var f = document.send_form;
+
+        if (!f.over_price0.value && f.amount2.value == "0원") {
+            document.getElementById('caution').innerHTML = "보증금을 입력하세요.";
+            f.lot_overprice.focus();
+            return false;
+        }
+        else {
+            return;
+        }
+    }
+
+</script>
+
+</body>
+</html>

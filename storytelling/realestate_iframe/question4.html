@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="http://www.khan.co.kr/spko/js/plugin/kakao.min.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+</head>
+<body>
+
+<form name="send_form" method="post"
+      action="./question5.html"
+      onsubmit="return submit_check();">
+    <input type="hidden" name="home_type" value="<?=$_POST['home_type']?>"/>
+    <input type="hidden" name="lot_people" value="<?=$_POST['lot_people']?>"/>
+    <input type="hidden" name="lot_price" value="<?=$_POST['lot_price']?>"/>
+    <input type="hidden" name="lot_overprice" value="<?=$_POST['lot_overprice']?>"/>
+    <input type="hidden" name="price0" value="<?=$_POST['price0']?>"/>
+    <input type="hidden" name="over_price0" value="<?=$_POST['over_price0']?>"/>
+    <input type="hidden" name="price1" value="<?=$_POST['price1']?>"/>
+    <input type="hidden" name="over_price1" value="<?=$_POST['over_price1']?>"/>
+    <input type="hidden" name="skip_value" value="<?=$_POST['skip_value']?>"/>
+
+
+    <div class="contentWrap">
+
+        <div class="example">
+            <div class="helper_closeBtn2"></div>
+            <h4>채권최고액 찾는법</h4>
+            <img src="http://img.khan.co.kr/spko/storytelling/2016/realestate/example.jpg"/>
+            <p>주택 등기부등본을 확인하시면 상기의표처럼 해당 주택의 <b>근저당권</b> 및 <b>채권최고액</b>을 확인하실 수 있습니다.</p>
+
+        </div>
+
+        <!-- 테스트 질문 영역 -->
+
+
+        <div class="que_area">
+
+
+            <div class="queHead">
+                <h1>Q4</h1>
+            </div>
+
+            <div class="queTxt">
+                <p>전·월세집을 담보로 대출금이 걸려 있습니까?</p>
+            </div>
+
+            <div class="q1_2box">
+                    <div class="respond_area">
+                        <div class="yes_no_area">
+                            <div id="radio">
+                                <input type="radio" id="radio1" name="radio1" value="yesBtn"><label class="yesBtn"
+                                                                                                    for="radio1">Yes</label>
+                                <input type="radio" id="radio2" name="radio1" checked="checked" value="noBtn"><label
+                                    class="noBtn" for="radio2">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+
+
+            <div class="loan_area">
+                <div class="helper_3">
+                </div>
+
+                <h4 class="long_h4">Q4-1. 해당 전·월세집의 채권최고액은 얼마입니까?</h4>
+
+                <div class="SeekBar_area">
+                    <label for="amount">선택 금액 : </label>
+                    <input type="text" id="amount" name="amount2" readonly
+                           style="border:1; color:#f6931f; font-weight:bold;">
+                    <input id="direct_put" type="checkbox" name="check_over5" value="over5"
+                           onClick="check_over(this);"/>
+                    <label id="direct_put_label">직접 입력</label>
+                    <input type="hidden" id="price" name="price2"/>
+
+                    <div class="slider_body">
+                        <label id="slider_uplable"> 단위:원</label>
+                        <br>
+
+                        <div id="slider1" value="0">
+                            <br>
+                            <label id="slider_lable1">0</label>
+                            <label id="slider_lable2"> 2.5억</label>
+                            <label id="slider_lable3"> 5억</label>
+                        </div>
+                    </div>
+
+                    <div id="slider_area">
+                        <div class="pre_set" id="pre_set">
+                            <input type="text" name="over_price2" class="onlyNumber" placeholder="ex)55000 "
+                                   onkeyup="inputNumberFormat(this)"/>만 원
+                            <p class="example_p">ex) 5억 5000만원 ▶ "55000" 입력</p>
+                        </div>
+                        <div id="caution"></div>
+                    </div>
+
+                </div><!--slider body-->
+
+            </div>
+        </div>
+
+        <div class="nxtBtn2"><input type="submit" value="다음"/></div>
+    </div>
+
+</form>
+
+<script>
+    $(document).ready(function () {
+        try {
+            addInputHandler({input: $(".onlyNumber"), dataType: "N", maxlength: 11});
+        } catch (e) {
+            console.log(e);
+        }
+    });
+
+    function submit_check() {
+        var f = document.send_form;
+
+        if (document.getElementById("radio1").checked) {
+
+            if (!f.over_price2.value && f.amount2.value == "0원") {
+                document.getElementById('caution').innerHTML = "채권최고액을 입력하세요.";
+                f.over_price2.focus();
+                return false;
+            }
+            else {
+                return;
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2671 @@
+﻿@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* { margin:0;  padding:0; }
+ol,ul { list-style:none; }
+a { outline:0; text-decoration:none; color:#555; }
+img { border:0; vertical-align:bottom; }
+
+
+/*---------------------*/
+/***** 전체 기본 CSS*****/
+/*---------------------*/
+
+iframe{margin-top:10%; margin-bottom:1%;}
+
+::-webkit-input-placeholder { color:#a6a6a6; }
+::-moz-placeholder { color:#a6a6a6; } /* firefox 19+ */
+:-ms-input-placeholder { color:#a6a6a6; } /* ie */
+input:-moz-placeholder { color:#a6a6a6; }
+
+.backLayer{
+	width:100%;
+	height:100%;
+}
+
+.warning_area p:hover a{
+	color: #ff9320;
+}
+
+.closeBtn2 {
+	width: 30px;
+	height: 30px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/closeBtn_split.png);
+	background-size: 30px 30px;
+	background-position: top;
+	cursor: pointer;
+}
+
+.warning_area p.keepBtn , .warning_area p.updateBtn{
+	width: 150px;
+	height: 35px;
+	line-height: 35px;
+	margin: 0px auto;
+	cursor: pointer;
+	display: block;
+	border: 1px solid white;
+	padding: 0px;
+	margin-bottom: 10px;
+}
+
+.warning_area .keepBtn:hover , .warning_area p.updateBtn:hover {
+	color: #ff9320;
+	border: 1px solid #ff9320;
+}
+ 
+input#direct_put {
+	display: none;
+}
+
+#direct_put_label {
+	width: 70px;
+	height: 25px;
+    color: #a6a6a6;
+	line-height: 23px;
+	margin-bottom: 0px;
+    text-align: center;
+    font-weight: 400;
+    border: none;
+    font-size: 13px;
+    background-color: #f6f6f6;
+    font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+    border: 1px solid #d5d5d5;
+	cursor: pointer;
+	border-radius: 3px;
+	  -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+
+#direct_put_label:hover {
+	border: 1px solid #ffae3c;
+    background: #fff;
+    font-weight: 700;
+    color: #eb8f00;
+}
+
+
+#direct_put_label:checked {
+	border: 1px solid #ffae3c;
+    background: #fff;
+    font-weight: 700;
+    color: #eb8f00;
+}
+
+/* IE 구버전 경고문 */
+
+ .warning_area  {
+	padding : 25px;
+	background-color: #353535;
+	width: 100%;
+	color: white;
+	position: absolute;
+	text-align: center;
+	z-index: 9999;
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+	display: block;
+}
+
+div.backLayer {
+		display:none;
+		background-color:black; 
+		position:absolute;
+		left:0px;
+		top:0px;
+		z-index:9999;
+}
+
+.warning_area h2 {
+	padding: 10px;
+}
+
+ .warning_area p {
+	padding: 10px;
+}
+
+.warning_area p a {
+	text-decoration: none;
+	color: white;
+}
+
+.closeBtn2 {
+	width: 30px;
+	height: 30px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/closeBtn_split.png);
+	background-size: 30px 30px;
+	background-position: top;
+	cursor: pointer;
+}
+
+
+/* IE 구버전 경고문 끝 */
+
+/*amount input box*/
+input#amount {
+	width: 110px;	
+	padding: 5px;
+}
+
+input.onlyNumber{
+	text-align:right;
+	padding: 3px;
+}
+
+#caution{
+	color:red;
+	font-weight:500;
+	font-size:14px;
+}
+
+.example_p {
+	color: #747474;
+	font-size: 12px;
+	padding-top: 10px;
+}
+
+.pre_set {
+	font-size: 14px;
+}
+
+
+/* 상단 탑바 */
+.wrapper {
+}
+
+#layer_fixed{
+            height:50px;
+            width:100%;
+            color: #555;
+            font-size:12px;
+            position:fixed;
+            z-index:999;
+            top:0px;
+            left:0px;
+            -webkit-box-shadow: 0 0px 2px 0 #d5d5d5;
+			filter: progid:DXImageTransform.Microsoft.Shadow(Color=#acacac, Strength=15, Direction=0),
+           progid:DXImageTransform.Microsoft.Shadow(Color=#acacac, Strength=15, Direction=90),
+           progid:DXImageTransform.Microsoft.Shadow(Color=#acacac, Strength=15, Direction=180),
+           progid:DXImageTransform.Microsoft.Shadow(Color=#acacac, Strength=15, Direction=270);
+            /* box-shadow: 0 1px 2px 0 #777; */
+            background-color:#fff;
+			padding-right: 9px;
+        }
+
+
+.shareicon {
+    height: 65px;
+    width: 65px;
+    margin-right: 1%;
+}
+
+.modal-dialog {
+    width: 400px !important;
+	margin: 30px auto !important;
+	}
+
+.topBar {
+	width: 100%;
+	height: 50px;
+	background: white;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 33;
+	box-shadow: 0 0px 10px rgba(0,0,0,0.3);
+}
+
+.topRow{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	height: 45px;
+	margin-top: 5px;
+	
+}
+
+.home {
+	width: 40px;
+	height: 40px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/homeicon_ie.png);
+	background-size: 40px 40px;
+	background-position: fixed;
+	position: absolute;
+	top: 0px;
+	right: 38px;
+	cursor: pointer;
+}
+
+.home a {
+	width: 40px;
+	height: 40px;
+	display: block;
+}
+
+.khanLogo {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 5px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/khan_logo_ie.png);
+	background-size: 40px 40px;
+	cursor: pointer;
+}
+
+.article {
+	width: 120px;
+	height: 40px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/article_icon_ie.png);
+	background-size: 120px 40px;
+	position: absolute;
+	top: 0px;
+	right: 76px;
+	cursor: pointer;
+}
+
+.article a {
+	width: 120px;
+	height: 40px;
+	display: block;
+}
+
+.khanLogo a {
+	width: 40px;
+	height: 40px;
+	display: block;
+}
+
+
+.shareBox {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	float: right;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/share.png);
+	background-size: 100% auto;
+	background-position: fixed;
+	cursor: pointer;
+}
+
+
+.toggleBox {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	float: right;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/toggleBtn.png);
+	background-size: 100% auto;
+	background-position: fixed;
+	cursor: pointer;
+}
+
+
+/* 콘텐츠 영역 */
+
+body {
+	background: rgb(242,235,225) !important; 
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+	display:block;
+	overflow:auto;
+}
+
+input{
+	width:auto;
+}
+
+label {
+	font-weight:0 !important;
+}
+
+.contentWrap {
+	width: 60%;
+	margin: 0 auto;
+	position: relative;
+
+}
+
+.contentArea {
+	width: 50%;
+	margin: 0px auto;
+	margin-top: 150px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/indexContentBg.jpg);
+	background-size: cover;
+	background-position: bottom right;
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;	 
+	-webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+	box-shadow: 0 0px 5px #d5d5d5;
+	min-width: 430px;
+	padding-bottom: 35px;
+
+}
+
+.head1 {
+	width: 300px;
+	height: 120px;
+	display: block;
+	margin: 0 auto;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/head1.png);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+}
+
+.head2 {
+	width: 400px;
+	height: 180px;
+	display: block;
+	margin: 0 auto;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/head2_3.png);
+	background-size: 100% auto;
+	background-position: fixed;
+	background-repeat: no-repeat;
+	margin-bottom: 20px;
+}
+
+.startBtnArea{
+	width: 150px;
+	height: 50px;
+	margin: 20px auto;
+	z-index:9999;
+}
+
+#startBtn {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+	border: 1px solid #a6a6a6;
+	font-weight: 300;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+	letter-spacing: 4px;
+	font-family: 'Open Sans', sans-serif;
+	color:#a6a6a6;
+
+}
+
+
+#startBtn:hover {
+	font-weight: 900;
+	background-color: #554c46;
+	color: white;
+	text-decoration: none;
+}
+
+.floatImg {
+	width: 129px;
+	height: 200px;
+	position: absolute;
+	bottom: 10px;
+	right: 13%;
+	animation: ani 2s linear infinite normal;
+}
+
+.pen {
+	width: 100%;
+	height: 100%;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/pen_ie.png);
+	background-size: 100% auto;
+	background-position: fixed;
+}
+
+@-ms-keyframes ani {
+	0% {
+			bottom: 10px;
+	}
+	50% {
+			bottom: 30px;
+	}
+	100% {
+			bottom: 10px;
+	}
+
+}
+
+@keyframes ani {
+	0% {
+			bottom: 10px;
+	}
+	50% {
+			bottom: 30px;
+	}
+	100% {
+			bottom: 10px;
+	}
+
+}
+
+/*    animation-duration: 3s;
+   animation-name: tossing;*/
+
+/* 하단 이미지 영역 */
+
+div#reap {margin-top: 30px;}
+
+#mainbottomarea {
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	z-index: -999;
+}
+
+.bottomArea {
+	width: 100%;
+	height: 200px;
+	position: absolute;
+	left: 0px;
+	z-index: -999;
+}
+
+.bottomImg {
+	width: 100%;
+	height: 200px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/bottomHouse.png);
+	background-repeat: repeat;
+}
+
+.byline {
+	width: 250px;
+	height: 40px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/byline.png);
+	display: block;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+/* 서브 인덱스 */
+
+
+article.sub1 {
+	width: 80%;
+	margin: 0px auto;
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	font-size: 18px;
+	max-width: 600px;
+	min-width: 520px;
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif
+}
+
+
+.subTxt_wrap {
+	background-color: rgb(255,255,255);
+	box-shadow: 0 0px 5px #d5d5d5;
+	border-radius: 10px;
+	 -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+
+}
+
+
+.sub1 img {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	border-radius: 10px 10px 0px 0px;
+	 -webkit-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+
+}
+
+.sub1Txt {
+	width: 90%;
+	margin: 0px auto;
+	padding: 20px;
+}
+
+.sub1Txt p:nth-child(2) {
+	font-size: 0.9em;
+}
+
+.sub1Txt p:nth-child(3) {
+	padding-bottom: 15px;
+}
+
+#subhead_pc {
+	width: 220px;
+	padding-top: 15px;
+}
+
+#subhead_mobile {
+	display: none;
+}
+
+.nxtBtn2 {
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+	width: 100px;
+	height: 40px;
+	display: block;
+	margin: 0 auto;
+	border-radius: 5px;
+	 -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+	z-index: 9999;
+	margin-bottom: 20px;
+}
+
+.nxtBtn2 a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	font-weight: 700;
+	background-color: #554c46;
+
+}
+
+.nxtBtn2 a:hover {
+	color: rgb(242,235,225);
+	background-color: #353535;
+	text-decoration: none;
+}
+
+/* 진단 테스트 화면 */
+
+.que_area {
+	width: 70%;
+	margin: 0px auto;
+	padding: 10px;
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+	position: relative;
+	overflow: hidden;
+	min-width: 525px;
+}
+
+/*q1_textbox*/
+#textBox_lot{
+    text-align: center;
+}
+
+#skip_div input{
+    border-radius: 5px;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #525252;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    font-size: 13px;
+    background-color: #eaeaea;
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+    border: 1px solid #d5d5d5;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+
+}
+
+#skip_div input:hover {
+    background: #525252;
+    color: white;
+	font-weight: 700;
+}
+
+
+/* 질문 헤더 */
+
+.queHead	{
+	width: 50px;
+	height: 35px;
+	display: block;
+	margin-left: 10px;
+	background-color: #353535;
+	border-radius: 20px;
+
+}
+
+.queHead h1 {
+	width: 100%;
+	height: 100%;
+	color: white;
+	line-height: 35px;
+	text-align: center;
+	font-size: 1.2em;
+	letter-spacing: 1px;
+	font-weight: 900;
+	margin: 0px;
+	margin-top: 0px;
+}
+
+/* 질문 헤더 끝 */
+
+/* 가구형태 설명 팝업문 시작*/
+
+.helper {
+	width: 130px;
+	height: 30px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/questionmark4.png);
+	background-position: top left;
+	position: absolute;
+	right: 0px;
+	top: 25px;
+	cursor: pointer;
+	z-index: 333;
+
+}
+
+.helper:hover {
+	background-position: bottom left;
+}
+
+.helper_area {
+	display: none;
+}
+
+div.popup {
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+	width: 500px;
+	background-color: rgb(255,255,255);
+	box-shadow: 0 0px 5px #d5d5d5;
+	border-radius: 3px;	  
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+	z-index: 9999;
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -250px;
+	padding: 20px;
+}
+
+
+.helper_closeBtn {
+	width: 30px;
+	height: 30px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/closeBtn_mobile.png);
+	background-size: 30px 30px;
+	background-position: bottom;
+	cursor: pointer;
+}		
+
+.helper_closeBtn:hover {
+	background-position: top;
+}
+
+.helper_area .hometype_navi {
+	width: 100%;
+	height: 40px;
+	overflow: hidden;
+	position: relative;
+}
+
+.helper_area .hometype_navi li {
+	float: left;
+	width: 20%;
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+.helper_area .hometype_navi li a {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	color: #BDBDBD;
+	background-color: #F6F6F6;
+	display: block;
+}
+
+.helper_area .hometype_navi li a:hover {
+	background-color: #353535;
+	color: #ff9320;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.helper_area h1 {
+	text-indent: -9999px;
+	width: 200px;
+	height: 30px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/housetitle.png);
+	margin: 0 auto;
+	margin-bottom:20px;
+}
+
+.helper_area h4 {
+	font-weight: bold;
+	color: #4c4c4c;
+}
+
+.helper_area h5 {
+	color: #A6A6A6;
+}
+
+
+.helper_area p {
+	padding: 10px 0px 10px 0px;
+	color: #8C8C8C;
+	line-height: 1.5em;
+}
+
+.helper_area ul {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.helper_area li {
+	float: left;
+	margin: 10px;
+	width: 200px;
+	height: 230px;
+}
+
+.helper_area li img {
+	width: 200px;
+	height: 200px;
+}
+
+.helper_area ul li {
+	text-align: center;
+	font-size: 12px;
+}
+
+img.hometype {
+	width: 460px;
+	height: 460px;
+
+}
+
+.hometype_txt {
+	background-color: #f6f6f6;
+	border: 1px solid #eaeaea;
+	padding: 0px 10px 0px 10px;
+	margin: 10px 0px;
+}
+
+
+p.top {
+	padding: 10px;
+	background-color: #F6F6F6;
+	border-bottom: 1px dashed #EAEAEA;
+}
+
+.slideup_2 {
+	width: 50px;
+	height: 36px;
+	display: block;
+	margin: 0 auto;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/slideupBtn.png);
+	cursor: pointer;
+}
+
+
+/* 가구형태 설명 팝업문 끝 */
+
+/* 질문 본문 */
+
+#add {font-size: 0.7em;}
+
+.queTxt {
+	width: 80%;
+	margin: 20px auto;
+	text-align: center;
+	font-size: 1.3em;
+	font-weight: 900;
+}
+
+.respond_area {
+	display: inline-flex;
+	width: 100%;
+	margin-top: 40px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.respond_area ul.home_type {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	padding: 10px; 
+	border-radius: 10px	; 
+	-webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+	padding: 30px;
+	background-color: #ffffff;
+	box-shadow: 0 0px 5px #d5d5d5;
+}
+
+.respond_area ul.home_type li {
+	width: 32%;
+	display: block;
+	float: left;
+	margin-left: 5px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.respond_area ul.home_type li a {
+	color: black;
+	font-weight: 500;
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.respond_area ul.home_type li img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 5px;
+	pointer-events:none;
+}
+
+.bottomImg_building {
+	width: 200px;
+	height: 450px;
+	position: absolute;
+	bottom: 0px;
+	right: 100px;
+	z-index: -10;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/bottomImg_building.png);
+	background-size: 100% auto;
+	background-position: top left;
+}
+
+
+.nxtBtn2 input {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 5px;
+	 -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	font-weight: 700;
+	background-color: #525252;
+	border: none;
+    outline:none;
+}
+
+.nxtBtn2 a:hover {
+	color: rgb(242,235,225);
+	background-color: #353535;
+	text-decoration: none;
+}
+
+.yes_no_area {
+	width: 100%;
+	height: 70px;
+	margin-bottom: 10px;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	line-height: 70px;
+	font-size: 22px;
+	letter-spacing: 2px;
+}
+
+p.yesBtn{
+	width: 45%;
+	display: inline-block;
+	height: 100%;
+	border-radius: 20px;
+	border: 1px solid #a6a6a6;
+	color: #a6a6a6;
+	cursor: pointer;
+	margin-right: 30px;
+}
+
+
+p.noBtn{
+	width: 45%;
+	height: 100%;
+	display: inline-block;
+	border-radius: 20px;
+	border: 1px solid #a6a6a6;
+	color: #a6a6a6;
+	cursor: pointer;
+}
+
+.yes_no_area p:hover {
+	background-color: #474747;
+	color: rgb(250,208,148);
+}
+
+.yes_no_area p:click {
+	background-color: #474747;
+	color: rgb(250,208,148);
+}
+
+
+.SeekBar_area {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+	/* background-color: rgba(0,0,0,0.1); */
+}
+
+/* 다가구 주택 추가 질문 영역 */
+
+.loan_area {
+	display: none;
+}
+
+.loan_area h4 {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+#slider_uplable {
+	font-size: 12px;
+}
+
+
+.loan_area_block {
+	margin-bottom: 20px;
+	width: 100%;
+/* 	height: 200px; */
+	background-color: #ffffff;
+	display: block;
+	border-radius: 10px;
+	padding: 15px;
+	box-shadow: 0 0px 5px #d5d5d5;
+	
+}
+
+.q1_2box {
+	background-color: #ffffff;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0px 5px #d5d5d5;
+	text-align: center;
+}
+
+#slider_area{
+	margin:20px;
+}
+
+
+
+/* 부동산중개업소 확인하기 링크*/
+
+.helper_2 {
+	width: 135px;
+	height: 30px;
+	position: absolute;
+	right: 0px;
+	top: 30px;
+	cursor: pointer;
+	
+}
+
+a#helper_2 {
+	width: 135px;
+	height: 30px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/questionmark5.png);
+	background-position: top left;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+a#helper_2:hover {
+	width: 135px;
+	height: 30px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/questionmark5.png);
+	background-position: bottom left;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.helper_3 {
+	width: 135px;
+	height: 30px;
+	cursor: pointer;
+	display: block;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/questionmark6.png);
+	background-position: top left;
+	margin: 0 auto;
+}
+
+.helper_3:hover {
+	background-position: bottom left;
+}
+
+.helper_3:visited {
+	background-position: top left;
+}
+
+.example {
+	display: none;
+
+}
+
+.example_block {
+	left: 50%;
+    margin-left: -400px;
+	width: 800px;
+	height: 500px;
+	display: block;
+	position: absolute;
+	top: 0px;
+	background-color: rgb(255,255,255);
+	border-radius: 10px;
+	padding: 20px;
+	z-index: 9999;
+	box-shadow: 0px 0px 5px #d5d5d5;
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+	display: block;
+}
+
+.example_block h4 {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	line-height: 1.5em;
+	margin: 0px 0px 0px 0px; 
+	padding: 15px 0px 15px 0px;
+	font-weight: bold;
+}
+
+.example_block img {
+	width: 100%;
+	height: auto;
+}
+
+.example_block p {
+	padding: 10px;
+	font-size: 1.1em;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.helper_closeBtn2 {
+	width: 30px;
+	height: 30px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/closeBtn_mobile.png);
+	background-size: 30px 30px;
+	background-position: bottom;
+	cursor: pointer;
+}		
+
+.helper_closeBtn2:hover {
+	background-position: top;
+}
+
+/*  결과 화면 */
+
+#riskDiv{
+	display:inline; 
+	font-size:30px; 
+	color:#e81d1d;
+	font-weight: 700;
+}
+
+ #Atype_area, #Btype_area, #Ctype_area,#Dtype_area,#Etype_area,#Ftype_area,#Gtype_area,#notype_area{
+	 display:none; 
+}
+
+.result_title{
+	text-align: center;
+}
+
+/*
+body#result {
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/resultBg.jpg) !important;
+	background-size: cover !important;
+	background-repeat: no-repeat;
+	background-position: fixed !important;
+}
+*/
+
+body#result .bottomArea {
+	width: 100%;
+	height: 150px;
+	position: relative;
+	bottom: 0px;
+	left: 0px;
+}
+
+.test_result_area {
+	width: 100%;
+	margin: 0px auto;
+	margin-top: 150px;
+	max-width: 680px;
+	min-width: 521px;
+	
+}
+
+.test_result_area h2 {
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	letter-spacing: 2px;
+	padding-bottom: 10px;
+}
+
+p.deco {
+	width: 60px;
+	height: 4px;
+	background-color: black;
+	margin: 0 auto;
+}
+
+
+span.bold  {
+	font-weight: 900;
+
+}
+
+.test_result {
+	width: 100%;
+	margin: 20px auto;
+	background-color: #ffffff;
+	padding: 20px;
+	box-shadow: 0 0px 5px #d5d5d5;
+	border-radius: 5px;
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+	padding-bottom: 35px;
+	
+}
+
+.Atype_area, .Btype_area, .Ctype_area, .Dtype_area, .Etype_area  {
+	width: 100%;
+	margin: 0px 0px 20px 0px;
+}
+
+
+.test_result h4 {
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.5em;
+	margin: 0px 0px 0px 0px; 
+	padding: 15px 0px 15px 0px;
+	font-weight: bold;
+}
+
+.test_result p {
+	width: 120px;
+	height: 30px;
+	margin: 0 auto;
+	line-height: 30px;
+	text-align: center;
+	background-color: rgb(85,76,70);
+	color: white;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 20px;
+	display: block;
+	list-style: none;
+}
+
+.test_result p:hover {
+	color: rgb(250,208,148);
+}
+
+
+.test_result h3 {
+	width: 100%;
+	height: 50px;
+	line-height: 30px;
+	font-size: 23px;
+	text-align: center;
+	font-weight: 900;
+	padding-bottom: 20px;
+	color: #000;
+	margin-top: 0px;
+	display:inline;
+}
+
+.result_description {
+	margin-top: 30px;
+	padding: 10px 20px 10px 20px;
+	margin: 0 auto;
+	display: block;
+	background-color: #f3f3f3;
+	border: 1px solid #EAEAEA;
+	display: none;
+	max-width: 540px;
+	margin-top:10px;
+}
+
+ul#notype {
+	display: block;
+	margin: 0 auto;
+	padding: 10px 20px 10px 20px;
+	display: block;
+	background-color: #f3f3f3;
+	border: 1px solid #EAEAEA;
+	max-width: 540px;
+}
+
+.allresult_description {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	margin: 0 auto;
+	padding: 10px 20px 10px 20px;
+	display: block;
+	background-color: #f3f3f3;
+	border: 1px solid #EAEAEA;
+	display: block;
+	max-width: 540px;
+}
+
+.result_description .result_description_img_pc {
+	width: 100%;
+	/* height: 300px; */
+	display: block;
+	margin-bottom: 20px;	
+} 
+
+.allresult_description .result_description_img_pc {
+	width: 100%;
+	/* height: 300px; */
+	display: block;
+	margin-bottom: 20px;	
+} 
+
+.result_description_img_pc img {
+	width: 100%;
+    height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+.result_description_img_mobile {
+	display: none;
+}
+
+
+.result_description li {
+	padding-bottom: 10px;
+	line-height: 1.7em;
+	color: #747474;
+}
+
+.allresult_description li {
+	padding-bottom: 10px;
+	line-height: 1.7em;
+	color: #747474;
+}
+
+.result_pop {
+	margin-top: 30px;
+	padding: 10px 20px 10px 20px;
+	display: block;
+	background-color: #f3f3f3;
+	border: 1px solid #EAEAEA;
+	display: block;
+}
+
+.result_description li a {
+	color: black;
+}
+
+.allresult_description li a {
+	color: black;
+}
+
+.result_description li a:hover {
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+
+.result_description li a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+.allresult_description li a:hover {
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+
+
+.allresult_description li a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+/* A 타입 그래프 */
+
+ul.Atype_graph {
+	width: 100%;
+	height: 120px;
+	overflow: hidden;
+	position: relative;
+	background-color: white;
+	margin-bottom: 10px;
+}
+
+ 
+ul.Atype_graph li {
+	float: left;
+	width: 50%;
+	padding: 0px;
+	margin: 0px;
+	display: inline-block;
+	text-align: center;
+}
+
+li.graph_head {
+	height: 70px;
+	background-color: #353535;
+	color: white;
+	font-weight: bold;
+}
+
+ul.Atype_graph li:nth-child(1) {
+	padding-top: 10px;
+}
+
+ul.Atype_graph li:nth-child(2) {
+	line-height: 70px;
+}
+
+li#border_right {
+	border-right: 1px solid #EAEAEA;
+}
+
+li.graph_num {
+	height: 50px;
+	line-height: 50px;
+	color: #5D5D5D;
+}
+
+
+/* A 타입 그래프 끝 */
+
+#slideup {
+	width: 50px;
+	height: 36px;
+	display: block;
+	margin: 0 auto;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/slideupBtn.png);
+	cursor: pointer;
+}
+.bottom_navi_area{
+	width: 100%;
+}
+
+.bottom_navi {
+	 width: 100%;
+	 overflow: hidden;
+	 position: relative;
+	 display: block;
+	 border-radius: 10px;
+	 margin: 10px auto;
+	 margin-bottom: 20px;
+	 height: 190px;
+}
+
+.bottom_navi a {
+	 display: block;
+	  font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+	 text-align: center;
+	 color: #bdbdbd;
+	 line-height: 80px;
+	 font-weight: bold;
+	 font-size: 1.1em;
+} 
+
+.bottom_navi a:hover {
+	color: #fff;
+	text-decoration: none;
+} 
+
+.bottom_navi li:hover {
+	background: #ff9320;
+	color: #fff;
+}
+
+.bottom_navi li:hover > a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.bottom_navi li {
+	float: left;
+	width: 49%;
+	height: 80px;
+	display: block;
+	cursor: pointer;
+	background-color: rgb(85,76,70);
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px #d5d5d5;
+}
+
+ .allresult_head {
+	text-align: center;
+	margin: 20px auto;
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+} 
+#allresultBtn {
+	margin-right: 10px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/allresultBtnBg.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	transition:all 0.5s ease 0s;
+}
+
+#allresultBtn:hover {
+	background-position: left bottom;
+}
+
+#checkBtn {
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/checkBtnBg.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	transition:all 0.5s ease 0s;
+}
+
+#checkBtn:hover {
+	background-position: left bottom;
+}
+
+#tipBtn {
+	width: 100%;
+	margin-top: 10px;
+	padding-left: 0px;
+	background-color: #ffffff;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/tipBtnBg.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+
+}
+
+#tipBtn a {
+	color: #8c8c8c;
+}
+
+#tipBtn:hover {
+	background-position: left bottom;	
+}
+
+#tipBtn:hover a {
+	color: rgb(85,76,70);
+}
+
+.tipBtn {
+	width: 200px;
+	height: 40px;
+	margin: 15px auto;
+	line-height: 30px;
+	line-height: 40px;
+	text-align: center;
+	background-color: rgb(85,76,70);
+	color: #bdbdbd;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 5px;
+	display: block;
+	list-style: none;
+	box-shadow: 0 2px 5px #d5d5d5;
+}
+
+.tipBtn a {
+	color: #bdbdbd;
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+}
+
+.tipBtn a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+.tipBtn a:click {
+	color: white;
+	text-decoration: none;
+}
+
+/*  테스트 뛰어넘기 화면 */
+
+.reaptest_img {
+	display: block;
+	margin: 0 auto;
+}
+
+/* 체크리스트 화면 */
+
+.checklist_area {
+	width: 100%;
+	margin: 20px auto;
+	background-color: #ffffff;
+	padding: 20px;
+	box-shadow: 0 0px 5px #d5d5d5;
+	border-radius: 5px;
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+
+}
+
+.checklist h3 {
+	width: 100%;
+	font-size: 18px;
+	text-align: center;
+	font-weight: 900;
+	padding: 20px 10px 5px 10px;
+	color: rgb(85,76,70);
+	margin-top: 0px;
+	line-height: 1.6em;
+}
+
+.checklist p {
+	width: 90%;
+	line-height: 1.7em;
+	color: #747474;
+	margin: 0 auto;
+}
+
+.checklist p a {
+	color: black;
+	font-size: 12px;
+}
+
+.checklist p a:hover {
+	color: black;
+	font-size: 12px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+p.last {
+	margin-bottom: 35px;
+}
+
+.checkliston {
+	width: 200px;
+	height: 40px;
+	margin: 15px auto;
+	line-height: 30px;
+	line-height: 40px;
+	text-align: center;
+	background-color: rgb(250,208,148);
+	color: rgb(85,76,70);
+	font-weight: bold;
+	border-radius: 5px;
+	display: block;
+	list-style: none;
+	box-shadow: 0px 0px 5px #d5d5d5;
+}
+
+
+/* 팁 화면 */
+
+
+ img.honeytip {
+	display: block;
+	width: 300px;
+	height: 100px;
+	margin: 10px auto;
+}
+
+.tipimg {
+	width: 90%;
+	height: auto;
+	margin: 20px auto;
+	display: block;
+}
+
+
+.tip_area_wrap {
+	width: 100%;
+	margin: 150px auto;
+	max-width: 680px;
+	min-width: 521px;
+}
+
+.tip_area_wrap h2 {
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	letter-spacing: 2px;
+	padding-bottom: 10px;
+}
+
+.tip_area {
+	width: 100%;
+	margin: 20px auto;
+	max-width: 750px;
+	background-color: #ffffff;
+	padding: 20px;
+	box-shadow: 0 0px 5px #d5d5d5;
+	border-radius: 5px;
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+}
+
+.tip h3 {
+	width: 100%;
+	font-size: 18px;
+	text-align: center;
+	font-weight: 900;
+	padding: 20px 10px 5px 10px;
+	color: rgb(85,76,70);
+	margin-top: 0px;
+	line-height: 1.6em;
+}
+
+.tip p {
+	width: 90%;
+	line-height: 1.7em;
+	color: #747474;
+	margin: 10px auto;
+}
+
+.tip p.ex {
+	padding-bottom: 20px;
+}
+
+.tip p.last {
+	margin-bottom: 35px;
+}
+
+.tip p.last2 {
+	padding-bottom: 20px;
+	border-bottom: 1px dashed #474747;
+}
+
+.tip_description p {
+	color: #353535;
+}
+
+p.imgdown {
+	width: 110px;
+	padding: 10px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: rgb(0,174,198);
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 5px;
+	display: block;
+	list-style: none;
+	font-size: 12px;
+	box-shadow: 0 0px 5px #d5d5d5;
+
+}
+
+p.imgdown a {
+	color: white;
+	text-decoration: none;
+}
+
+p.imgdown a:hover {
+	text-decoration: none;
+}
+
+p.imgdown a:visited {
+	text-decoration: none;
+}
+
+
+/*---------------------*/
+/***** 노트북 CSS*****/
+/*---------------------*/
+
+@media screen and (max-width: 1370px)  {
+
+.contentArea {
+	margin-top: 100px;
+
+}
+
+article.sub1 {
+	width: 65%;
+}
+
+
+.test_result_area {
+	margin-top: 100px;
+}
+
+}
+
+
+/*---------------------*/
+/***** 태블릿용 CSS****/
+/*---------------------*/
+
+@media screen and (max-width: 801px)  {
+
+
+/* index */
+
+.pen {
+	display:none;
+}
+
+.contentArea {
+	width: 80%;
+	margin-top: 200px;
+}
+
+.floatImg {
+	display: none;
+}
+
+/* subindex */
+
+article.sub1 {
+	width: 80%;
+	margin: 0px auto;
+	margin-top: 90px;
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	font-size: 16px;
+	max-width: 600px;
+	min-width: 520px;
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif
+}
+
+.arrow_right {
+ display: none;
+}
+
+.subIndexBottom {
+	display: none;
+}
+
+.nxtBtn {
+	height: 50px;
+	width: 90px;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	cursor: pointer;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/nxtBtn.gif);
+	background-size: 100% auto;
+}
+
+.nxtBtn a{
+	height: 50px;
+	width: 90px;
+	display: block;
+
+}
+
+.example_block {
+	width: 700px;
+	top: 0px;
+	left: -40px;
+	 left: 50%;
+	 margin-left: -350px; 
+}
+
+/* 진단 테스트 화면 */
+
+.contentWrap {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+
+}
+
+.que_area {
+	width: 100%;
+}
+
+
+/* 변경↓↓ 2016.06.01  */
+
+div.popup {
+	width: 500px;
+	background-color: rgb(255,255,255);
+	box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+	border-radius: 3px;
+	position: absolute;	
+	z-index: 9999;
+	top: -90px;
+	left: 50%;
+	margin-left: -250px;
+	display: block;
+	padding: 20px;
+}
+
+.respond_area ul.home_type li {
+	width: 32%;
+	display: block;
+	float: left;
+	padding-left: 5px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.bottomImg_building {
+	width: 200px;
+	height: 450px;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	z-index: -10;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/bottomImg_building.png);
+	background-size: 100% auto;
+	background-position: top left;
+}
+
+.result_description li {
+	max-width: 500px;
+}
+
+/* 변경끝 */
+
+.checklist_area {
+	width: 90%;
+	border-radius: 0px;
+}
+
+
+.test_result_area {
+	width: 100%;
+	margin: 0px auto;
+	margin-top: 110px;
+	max-width: 680px;
+	min-width: 100px;
+	
+}
+
+/* 팁 화면*/
+
+.tip_area_wrap {
+	width: 100%;
+	margin: 150px auto;
+	max-width: 680px;
+	min-width: 100px;
+}
+
+
+img.bee {
+	display: none;
+}
+
+
+
+
+
+}
+
+
+/*--------------------------------------*/
+/***** 최신 모바일용 - 갤럭시, 아이폰6****/
+/*------------------------------------*/
+
+
+@media screen and (max-width: 436px) {
+
+
+.contentWrap {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+
+}
+
+.contentArea {
+    width: 90%;
+    margin: 0px auto;
+	margin-top: 75px !important;
+	background-image:none;
+	box-shadow: 0 0px 5px rgba(0,0,0,0.1);
+	min-width: 300px;
+	background-color: rgba(255,255,255,0.9);
+	border-radius: 10px;
+}
+
+.shareicon {
+    height: 50px;
+    width: 50px;
+    margin-right: 1%;
+}
+
+.modal-dialog {
+    width: auto !important;
+	margin: 30px 15px auto !important;
+	}
+
+.head1{
+	padding-top: 20px;
+    width: 250px;
+	height: 120px;
+}
+
+.head2{
+    width: 300px;
+    height: 130px;
+	margin-bottom: 35px;
+}
+
+.startBtnArea {
+    width: 120px;
+    height: 30px;
+	margin: 20px auto;
+}
+
+.bottomArea {
+	height: 150px;
+}
+
+.bottomImg {
+	height: 150px;
+	background-size: auto 150px;
+}
+
+
+#startBtn {
+	width: 100%
+	height: 30px;
+}
+
+.floatImg {
+	display: none;
+}
+
+/* subindex */
+
+
+body#subindex div.contentWrap {
+	width: 100%;
+}
+
+article.sub1 {
+	padding-top: 0px;
+	width: 100% !important;
+	margin: 0px auto;
+	margin-top: 70px;
+	margin-bottom: 10px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0px;
+	text-align: center;
+	font-size: 16px;
+	max-width: 600px;
+	min-width: 300px;
+	background: none;
+	box-shadow: none;
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+	color: white;
+}
+
+.subTxt_wrap {
+	box-shadow: 0px 0px 7px rgba(0,0,0,0.2);
+	width: 100%;
+}
+
+h2.sub_head {
+	color: #353535;
+}
+
+.sub1 img {
+	height: auto;
+	border-radius: 0px;
+	
+}
+
+#subhead_pc {
+	display: none;
+
+}
+
+img#subhead_mobile {
+	display: block;
+	width: 156px;
+}
+
+.sub1Txt {
+	width: 100%;
+	margin: 0px auto;
+	padding: 10px 10px 20px 10px;
+	font-size: 16px;
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+}
+
+.sub1Txt p:nth-child(1) {
+	padding-top: 10px;
+}
+
+
+.arrow_right {
+	 display: none;
+}
+
+
+/* 진단 테스트 화면 */
+
+.bottomImg_building {
+	display: none;
+}
+
+.que_area {
+	width: 100%;
+	margin: 0px auto;
+	padding: 10px;
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+	position: relative;
+	overflow: hidden;
+	min-width: 300px;
+}
+
+.q1_2box {
+	background-color: rgba(255,255,255,0.9);
+	padding: 20px;
+	margin: 0px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+}
+
+.sliderAmount_box{
+	position: relative;
+    margin: 0 auto;
+}
+
+/* 가구형태 설명 팝업문 */
+
+
+.helper_closeBtn:click {
+	background-position: top;
+}
+
+/* 변경↓↓ 2016.06.01  */
+
+.helper {
+	width: 130px;
+	height: 30px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/questionmark4.png);
+	background-position: top left;
+	position: absolute;
+	right: 15px;
+	top: 30px;
+	cursor: pointer;
+	z-index: 333;
+}
+
+.helper_area {
+	width: 350px;
+	background-color: rgb(255,255,255);
+	box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+	border-radius: 3px;
+	position: absolute;	
+	z-index: 9999;
+	top: 30px;
+	left: 10px;
+	display: none;
+	padding: 20px;
+}
+
+.helper_area img {
+	width: 320px;
+}
+
+.helper_area img.hometype {
+	width: 320px;
+	height: 320px;
+	display:none;
+}
+
+
+div.popup {
+	width: 360px;
+	background-color: rgb(255,255,255);
+	box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+	border-radius: 3px;
+	position: absolute;	
+	z-index: 9999;
+	top: 0px;
+	left: 50%;
+	margin-left: -180px;
+	display: block;
+	padding: 20px;
+
+}
+
+.helper_area li {
+	width: 140px;
+	height: 150px;
+}
+
+.helper_area li img {
+	width: 140px;
+	height: 140px;
+}
+
+/* 변경 끝  */
+
+/* 가구형태 설명 팝업문 끝 */
+
+ul.Atype_graph li {
+	font-size: 0.9em;
+}
+
+.respond_area ul.home_type {
+	padding: 10px;
+}
+
+.respond_area ul.home_type li {
+	width: 31%;
+	font-size: 13px;
+	text-align: center;
+}
+
+.queTxt {
+	width: 90%;
+	margin: 20px auto;
+	text-align: center;
+	font-size: 1.4em;
+	font-weight: 500;
+}
+
+.SeekBar_area {
+	width: 100%;
+	/* background-color: rgba(0,0,0,0.1); */
+}
+
+p.yesBtn {
+	margin-right: 10px;
+}
+
+.loan_area h4 {
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+} 
+
+h4.long_h4 {
+	height: 50px;
+	line-height: 25px;
+}
+
+.loan_area .SeekBar_area{
+}
+
+.helper_2 {
+	width: 130px;
+	height: 30px;
+	position: absolute;
+	right: 10px;
+	top: 25px;
+	cursor: pointer;
+	
+}
+
+a#helper_2 {
+	width: 135px;
+	height: 30px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/questionmark5.png);
+	background-position: top left;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+
+a#helper_2:hover {
+	background-position: bottom left;
+}
+
+a#helper_2:visited {
+	background-position: top left;
+}
+
+
+.example_block {
+	width: 100%;
+	height: 370px;
+	top: 0px;
+	left: 0px;
+	margin-left: 0px; 
+}
+
+/* 결과 화면 */
+
+.test_result {
+	box-shadow: 0 -1px 10px rgba(0,0,0,0.1);
+	border-radius: 0px;
+}
+
+
+.test_result h4 {
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	margin: 10px 0px 10px 0px; 
+	padding: 0px 0px 0px 0px;
+	font-weight: bold;
+}
+
+
+.test_result_area {
+	margin: 0px auto;
+	margin-top: 85px;
+}
+
+.result_description .result_description_img_pc {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin-bottom: 10px;	
+} 
+
+.result_description .result_description_img_pc img {
+	width: 100%;
+	height: auto;
+	display: block;
+} 
+
+.allresult_description .result_description_img_pc {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin-bottom: 10px;	
+} 
+
+.allresult_description .result_description_img_pc img {
+	width: 100%;
+	height: auto;
+	display: block;
+} 
+
+.bottom_navi_area{
+	width: 100%;
+	padding: 10px;
+}
+
+.bottom_navi {
+	 width: 100%;
+	 overflow: hidden;
+	 position: relative;
+	 display: block;
+	 border-radius: 10px;
+	 margin: 10px auto;
+	 margin-bottom: 20px;
+	 height: 190px;
+}
+
+.bottom_navi a {
+	 line-height: 80px;
+	 display: block;
+	  font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+	 color: #bdbdbd;
+	 font-weight: bold;
+	 font-size: 1em;
+} 
+
+
+.bottom_navi li {
+	float: left;
+	width: 49%;
+	height: 80px;
+	display: block;
+	cursor: pointer;
+	background-color: rgb(85,76,70);
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+}
+
+#allresultBtn {
+	margin-right: 5px;
+}
+
+#allresultBtn, #checkBtn {
+	background-image: none;
+}
+
+#tipBtn {
+	width: 100%;
+	margin-top: 10px;
+	padding-left: 0px;
+	background-color: rgba(255,255,255,0.7);
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/tipBtnBg.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+
+}
+
+#tipBtn:hover {
+	background-position: right bottom;	
+}
+
+/*
+.result_description_img_mobile {
+	width: 100%;
+	height: 300px;
+	display: block;
+	margin-bottom: 20px;	
+}
+
+.allresult_description_img_mobile {
+	width: 100%;
+	height: 300px;
+	display: block;
+	margin-bottom: 20px;	
+}
+
+
+.result_description_img_mobile img {
+	width: 300px;
+	height: 300px;
+	display: block;
+	margin: 0 auto;
+
+}
+
+*/
+
+
+.checklist_area {
+	width: 100%;
+
+}
+
+
+}
+
+
+/*----------------------------*/
+/***** 구 모바일용 - 아이폰5 이하****/
+/*----------------------------*/
+
+
+@media screen and (max-width: 341px){
+
+.contentWrap {
+	width: 100%;
+}
+
+.contentArea {
+    width: 90%;
+    margin: 0px auto;
+	margin-top: 70px;
+	background-image:none;
+	box-shadow: 0 0px 5px rgba(0,0,0,0.1);
+	min-width: 300px;
+	background-color: rgba(255,255,255,0.9);
+	border-radius: 10px;
+}
+
+.head1 {
+	width: 220px;
+	height: 110px;
+}
+
+.head2 {
+	width: 270px;
+	height: 120px;
+}
+
+.startBtnArea{
+	width: 120px;
+	height: 30px;
+}
+
+.floatImg {
+	display: none;
+}
+
+.bottomArea {
+	height: 150px;
+	position: relative;
+	bottom: 0px;
+}
+
+#mainbottomarea {
+	width: 100%;
+	position: relative;
+	left: 0px;
+	bottom: 0px;
+	z-index: -999;
+}
+
+/*sub index*/
+
+body#subindex div.contentWrap {
+	width: 100%;
+}
+
+
+article.sub1 {
+	padding-top: 0px;
+	width: 100% !important;
+	margin: 0px auto;
+	margin-top: 70px;
+	margin-bottom: 10px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0px;
+	text-align: center;
+	font-size: 16px;
+	max-width: 600px;
+	min-width: 300px;
+	background: none;
+	box-shadow: none;
+	font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+	color: white;
+}
+
+.subTxt_wrap {
+	box-shadow: 0px 0px 7px rgba(0,0,0,0.2);
+	width: 100%;
+}
+
+h2.sub_head {
+	color: #353535;
+}
+
+.sub1 img {
+	height: auto;
+	border-radius: 0px;
+	
+}
+
+#subhead_pc {
+	display: none;
+
+}
+
+img#subhead_mobile {
+	display: block;
+	width: 156px;
+}
+
+.sub1Txt {
+	width: 100%;
+	margin: 0px auto;
+	padding: 10px 10px 20px 10px;
+	font-size: 14px;
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+}
+
+.sub1Txt p:nth-child(1) {
+	padding-top: 10px;
+}
+
+.arrow_right {
+ display: none;
+}
+
+
+/* 가구형태 설명 팝업문 */
+
+
+/* 변경↓↓ 2016.06.01  */
+
+.helper {
+	width: 130px;
+	height: 30px;
+	background-image: url(http://img.khan.co.kr/spko/storytelling/2016/realestate/questionmark4.png);
+	background-position: top left;
+	position: absolute;
+	right: 15px;
+	top: 30px;
+	cursor: pointer;
+	z-index: 333;
+}
+
+.helper_area {
+	display: none;
+	padding: 20px;
+}
+
+.helper_area img {
+	width: 260px;
+}
+
+div.popup {
+	width: 300px;
+	background-color: rgb(255,255,255);
+	box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+	border-radius: 3px;
+	position: absolute;	
+	z-index: 9999;
+	top: 0px;
+	left: 50%;
+	margin-left: -150px;
+	display: block;
+	padding: 20px;
+}
+
+.helper_area .hometype_navi {
+	display: none;	
+}
+
+
+
+.helper_area li {
+	width: 120px;
+	height: 135px;
+	margin: 2px;
+}
+
+.helper_area li img {
+	width: 120px;
+	height: 120px;
+}
+
+.helper_area img.hometype {
+	width: 260px;
+	height: 260px;
+	display:none;
+}
+
+/* 변경 끝 */
+
+/* 가구형태 설명 팝업문 끝 */
+
+
+.queTxt p {
+	font-size: 16px;
+}
+
+.helper_2 {
+	right: 5px;
+	top: 25px;
+	
+}
+
+.example_block {
+	width: 100%;
+	height: 350px;
+	top: 0px;
+	left: 0px;
+}
+
+.respond_area {
+	margin: 25px auto;
+}
+
+.respond_area ul.home_type li {
+	width: 31%;
+}
+
+.test_result h3 {
+	width: 100%;
+	height: 50px;
+	line-height: 30px;
+	font-size: 16px;
+	text-align: center;
+	font-weight: 900;
+	padding-bottom: 20px;
+	color: #000;
+	margin-top: 0px;
+}
+
+.test_result h4 {
+	font-size: 14px;	
+}
+
+
+.result_description_img_mobile {
+	width: 260px;
+	height: 260px;
+}
+
+.result_description_img_mobile img {
+	width: 260px;
+	height: 260px;
+	position: relative;
+	right: 10px;
+}
+
+.result_description li {
+	font-size: 0.9em;
+}
+
+.bottom_navi a {
+	 line-height: 80px;
+	 display: block;
+	  font-family: '나눔고딕', 'Nanum Gothic', sans-serif;
+	 color: #bdbdbd;
+	 font-weight: bold;
+	 font-size: 0.9em;
+} 
+
+#tipBtn {
+	background-image: none;
+
+}
+
+img.honeytip {
+	display: block;
+	width: 250px;
+	height: 83px;
+	margin: 10px auto;
+}
+
+.reaptest_img {
+	display: block;
+	margin: 0 auto;
+	width: 250px;
+}
+
+
+}
+
